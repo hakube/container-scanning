@@ -1,8 +1,5 @@
-name: build
+name: trivy-image-scan
 on:
-  push:
-    branches:
-      - master
   pull_request:
 jobs:
   build:
