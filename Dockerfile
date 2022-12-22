@@ -1,4 +1,4 @@
-FROM php:7.4-cli
+FROM php:latest
 
 COPY . /srv/myapp
 WORKDIR /srv/myapp
