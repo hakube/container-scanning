@@ -21,7 +21,9 @@ jobs:
           format: 'sarif'
           output: 'trivy-results.sarif'
           ignore-unfixed: true
-          vuln-type: 'os,library,fs'
+          scan-type: 'os,library,fs,repo'
+          scan-ref: '*.*'
+          vuln-type: 'os,library,fs,repo'
           severity: 'CRITICAL,HIGH'
       - name: Upload Trivy scan results to GitHub Security tab
         uses: github/codeql-action/upload-sarif@v2
