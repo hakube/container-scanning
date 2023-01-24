@@ -20,9 +20,6 @@ jobs:
           image-ref: 'php-myapp'
           format: 'sarif'
           output: 'trivy-results.sarif'
-          ignore-unfixed: true
-          scan-type: 'os,library,image'
-          vuln-type: 'os,library,image'
           severity: 'CRITICAL,HIGH'
       - name: Upload Trivy scan results to GitHub Security tab
         uses: github/codeql-action/upload-sarif@v2
